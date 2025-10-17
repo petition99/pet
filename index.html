@@ -245,14 +245,14 @@
             margin-bottom: 30px;
         }
 
-        /* --- МОДИФІКАЦІЯ ДЛЯ ВІЗУАЛЬНОГО ЗБІГУ З СКРІНШОТОМ (156 з 25000 = ~2.25 градуса) --- */
+        /* --- ПОВЕРНЕННЯ СИНОЇ ШКАЛИ (8393/25000 ≈ 121 градус) --- */
         .progress-circle {
             position: relative;
             width: 200px;
             height: 200px;
             background: conic-gradient(
-                #0056b3 0deg 2.25deg, /* Змінено 121deg на 2.25deg */
-                #e0e0e0 2.25deg 360deg /* Змінено 121deg на 2.25deg */
+                #0056b3 0deg 121deg,
+                #e0e0e0 121deg 360deg
             );
             border-radius: 50%;
             display: flex;
@@ -275,18 +275,18 @@
             line-height: 1.1;
         }
 
-        /* ЗМІНА: Зменшив жирність (font-weight) до 400 */
+        /* ЗМІНА: ВСТАНОВЛЕННЯ FONT-WEIGHT: 400 (НЕЖИРНИЙ) ДЛЯ ВІДПОВІДНОСТІ СКРІНШОТУ */
         .progress-votes-count {
             font-size: 64px;
-            font-weight: 400; 
+            font-weight: 400; /* Встановлено 400 */
             color: #212529;
             margin-bottom: 5px;
         }
 
-        /* ЗМІНА: Зменшив жирність (font-weight) до 400 */
+        /* ЗМІНА: ВСТАНОВЛЕННЯ FONT-WEIGHT: 400 (НЕЖИРНИЙ) ДЛЯ ВІДПОВІДНОСТІ СКРІНШОТУ */
         .progress-votes-info {
             font-size: 20px;
-            font-weight: 400;
+            font-weight: 400; /* Встановлено 400 */
             color: #212529;
             line-height: 1.2;
         }
