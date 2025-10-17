@@ -138,10 +138,10 @@
             line-height: 1.35;
         }
 
-        /* ЗМІНА: Зменшив жирність (font-weight) до 500 */
+        /* ЗМІНА: Зменшив жирність (font-weight) до 400 */
         .petition-main-title {
             font-size: 23px; 
-            font-weight: 500; 
+            font-weight: 400; 
             margin: 0;
             line-height: 1.35;
         }
@@ -172,9 +172,8 @@
             height: 20px;
             margin-right: 10px;
             flex-shrink: 0;
-            /* ЗМІНА: Додано відносну позицію для точного вирівнювання іконок */
-            position: relative; 
-            top: 2px; /* Трохи змістити, щоб вирівняти по верхньому краю першого рядка тексту */
+            /* ЗМІНА: Прибираємо позиціювання. Іконка людини - це фонове зображення. 
+            Вирівнювання забезпечуємо Flexbox. */
         }
 
         .icon-person {
@@ -184,12 +183,15 @@
             background-repeat: no-repeat;
         }
 
+        /* ЗМІНА: Вирівнюємо символ '+' по центру його 20x20px контейнера */
         .icon-plus {
             font-size: 20px; 
             color: #f0b90b;
             font-weight: 700; 
-            /* ЗМІНА: Видалено top: 2px, оскільки тут це символ і він краще виглядає без зміщення. 
-            Вирівнювання забезпечує .detail-row (align-items: flex-start) */
+            display: block; /* Важливо для вирівнювання тексту */
+            text-align: center; /* Вирівнювання по горизонталі */
+            line-height: 20px; /* Вирівнювання по вертикалі в контейнері 20px */
+            margin-left: 0.5px; /* Невелике коригування для ідеального центрування символу '+' */
         }
 
         .petition-tabs {
@@ -271,10 +273,10 @@
             line-height: 1.1;
         }
 
-        /* ЗМІНА: Зменшив жирність (font-weight) до 500 */
+        /* ЗМІНА: Зменшив жирність (font-weight) до 400 */
         .progress-votes-count {
             font-size: 64px;
-            font-weight: 500; 
+            font-weight: 400; 
             color: #212529;
             margin-bottom: 5px;
         }
