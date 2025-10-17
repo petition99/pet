@@ -129,17 +129,19 @@
             display: block;
         }
 
+        /* ЗМІНА: Зменшив жирність (font-weight) до 400 */
         .petition-number {
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 400; 
             color: #212529;
             margin: 40px 0 30px 0; 
             line-height: 1.35;
         }
 
+        /* ЗМІНА: Зменшив жирність (font-weight) до 500 */
         .petition-main-title {
             font-size: 23px; 
-            font-weight: 600; 
+            font-weight: 500; 
             margin: 0;
             line-height: 1.35;
         }
@@ -157,9 +159,10 @@
             color: #212529;
         }
 
+        /* ЗМІНА: Використовуємо align-items: flex-start, щоб іконка та текст не були по центру (вирівняно для кращого вигляду) */
         .detail-row {
             display: flex;
-            align-items: center; 
+            align-items: flex-start; /* Вирівняти елементи на початку рядка */
             margin-bottom: 15px;
             font-weight: 400;
         }
@@ -169,6 +172,9 @@
             height: 20px;
             margin-right: 10px;
             flex-shrink: 0;
+            /* ЗМІНА: Додано відносну позицію для точного вирівнювання іконок */
+            position: relative; 
+            top: 2px; /* Трохи змістити, щоб вирівняти по верхньому краю першого рядка тексту */
         }
 
         .icon-person {
@@ -182,6 +188,8 @@
             font-size: 20px; 
             color: #f0b90b;
             font-weight: 700; 
+            /* ЗМІНА: Видалено top: 2px, оскільки тут це символ і він краще виглядає без зміщення. 
+            Вирівнювання забезпечує .detail-row (align-items: flex-start) */
         }
 
         .petition-tabs {
@@ -239,11 +247,11 @@
             position: relative;
             width: 200px;
             height: 200px;
-            border-radius: 50%;
             background: conic-gradient(
                 #0056b3 0deg 121deg,
                 #e0e0e0 121deg 360deg
             );
+            border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -263,13 +271,15 @@
             line-height: 1.1;
         }
 
+        /* ЗМІНА: Зменшив жирність (font-weight) до 500 */
         .progress-votes-count {
             font-size: 64px;
-            font-weight: 600;
+            font-weight: 500; 
             color: #212529;
             margin-bottom: 5px;
         }
 
+        /* ЗМІНА: Зменшив жирність (font-weight) до 400 */
         .progress-votes-info {
             font-size: 20px;
             font-weight: 400;
