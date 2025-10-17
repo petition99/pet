@@ -245,19 +245,21 @@
             margin-bottom: 30px;
         }
 
+        /* --- МОДИФІКАЦІЯ ДЛЯ ВІЗУАЛЬНОГО ЗБІГУ З СКРІНШОТОМ (156 з 25000 = ~2.25 градуса) --- */
         .progress-circle {
             position: relative;
             width: 200px;
             height: 200px;
             background: conic-gradient(
-                #0056b3 0deg 121deg,
-                #e0e0e0 121deg 360deg
+                #0056b3 0deg 2.25deg, /* Змінено 121deg на 2.25deg */
+                #e0e0e0 2.25deg 360deg /* Змінено 121deg на 2.25deg */
             );
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+        /* --------------------------------------------------------------------------------- */
 
         .progress-inner-circle {
             position: absolute;
@@ -329,8 +331,9 @@
         }
 
         .progress-bar {
+            /* Width calculation based on 8393 / 25000 = 0.33572 or 33.572% */
+            width: 33.57%; 
             height: 100%;
-            width: 30.25%; 
             background-color: #f0b90b; 
             border-radius: 3px;
         }
@@ -755,9 +758,6 @@ body.menu-open { overflow: hidden !important; height: 100%; }
     document.querySelectorAll('a:not(.menu-close):not(.social-icon-button), button:not(.menu-close)').forEach(el => {
         // Умова, щоб не перенаправляти соціальні посилання та посилання у футері, 
         // які ви хотіли залишити як були (наприклад, Урядовий портал, хоча тут вони на #)
-        // Для спрощення ми націлимо лише на меню та ключові кнопки, але якщо потрібно ВСЕ, тоді:
-        // el.addEventListener('click', redirectToTarget);
-
         // Залишаємо лише ті, що були додані в основній сторінці, плюс меню елементи (вже додані вище)
     });
   }
